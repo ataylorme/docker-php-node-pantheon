@@ -44,5 +44,5 @@ RUN \
 
 # Install Terminus
 RUN \
-	echo -e "\nInstalling Terminus..." && \
+	echo -e "\nInstalling Terminus 1.x..." && \
 	/usr/bin/env COMPOSER_BIN_DIR=$HOME/bin composer --working-dir=$HOME require pantheon-systems/terminus "^1"
