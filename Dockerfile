@@ -60,5 +60,6 @@ RUN \
 # Install Terminus plugins
 RUN \
 	echo -e "\nInstalling Terminus plugins..." && \
+	mkdir -p $HOME/.terminus/plugins && \
 	composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:dev-master && \
 	composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
