@@ -19,11 +19,6 @@ RUN \
 	echo -e "\nInstalling wget..." && \
 	apt-get install -y wget
 
-# Install jq
-RUN \
-	echo -e "\nInstalling jq..." && \
-	apt-get install -y jq
-
 # Install rsync
 RUN \
 	echo -e "\nInstalling rsync..." && \
@@ -33,19 +28,6 @@ RUN \
 RUN \
 	echo -e "\nInstalling gulp v${GULP_VERSION}..." && \
 	npm install -g gulp@${GULP_VERSION}
-
-# Install backstop globally
-RUN \
-	echo -e "\nInstalling BackstopJS v${BACKSTOPJS_VERSION}..." && \
-	npm install -g backstopjs@${BACKSTOPJS_VERSION}
-
-# Chrome (from edge)
-RUN \
-	echo -e "\nInstalling Google Chrome..." && \
-	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-	sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && \
-	apt-get update  && \
-	apt-get install -y "google-chrome-stable"
 
 # Install Terminus
 RUN \

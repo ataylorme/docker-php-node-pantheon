@@ -6,8 +6,6 @@ A PHP and Node Docker image for use with Continuous Integration services deployi
 * Composer
 * Node `6.x`
 * npm
-* Google Chrome
 * gulp `3.9.1`
-* jq
 * Terminus `1.x`
 * rsync
