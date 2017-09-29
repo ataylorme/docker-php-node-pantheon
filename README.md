@@ -10,3 +10,4 @@ A PHP and Node Docker image for use with Continuous Integration services deployi
 * gulp `3.9.1`
 * jq
 * Terminus `1.x`
+* rsync

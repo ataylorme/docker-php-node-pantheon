@@ -4,6 +4,10 @@ FROM drupalci/php-7.1-apache:production
 # Update
 RUN apt-get update 
 
+ENV \
+	BACKSTOPJS_VERSION=3.0.25 \
+	GULP_VERSION=3.9.1
+
 # Install node/npm
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN \
@@ -15,14 +19,15 @@ RUN \
 	echo -e "\nInstalling wget..." && \
 	apt-get install -y wget
 
-ENV \
-	BACKSTOPJS_VERSION=3.0.25 \
-	GULP_VERSION=3.9.1
-
 # Install jq
 RUN \
 	echo -e "\nInstalling jq..." && \
-	apt-get install -y  jq
+	apt-get install -y jq
+
+# Install rsync
+RUN \
+	echo -e "\nInstalling rsync..." && \
+	apt-get install -y rsync
 
 # Install gulp globally
 RUN \
