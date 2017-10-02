@@ -24,6 +24,11 @@ RUN \
 	echo -e "\nInstalling rsync..." && \
 	apt-get install -y rsync
 
+# Install ssh
+RUN \
+	echo -e "\nInstalling ssh..." && \
+	apt-get install -y openssh-server
+
 # Install gulp globally
 RUN \
 	echo -e "\nInstalling gulp v${GULP_VERSION}..." && \
