@@ -27,7 +27,7 @@ RUN \
 # Install ssh
 RUN \
 	echo -e "\nInstalling ssh..." && \
-	apt-get install -y openssh-server
+	apt-get install -y openssh-client
 
 # Install gulp globally
 RUN \
